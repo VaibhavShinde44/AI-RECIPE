@@ -1,0 +1,622 @@
+                          A MAJOR PROJECT REPORT
+                                                ON
+
+                                  "AI recipe generator"
+
+                                        Submitted to
+
+        SAVITRIBAI PHULE PUNE UNIVERSITY
+
+                 In Partial Fulfilment of the Requirement for the Award of
+
+MASTER OF COMPUTER APPLICATIONS (Under Engineering)
+                                                BY
+
+                                        Student Name
+                                  Exam Seat No: 4444
+
+                                     UNDER THE GUIDANCE OF
+
+                                         Guide Name
+
+          DEPARTMENT OF MASTER OF COMPUTER APPLICATIONS
+
+                 TRINITY ACADEMY OF ENGINEERING
+
+                                    Kondhwa Annex, Pune - 411048
+                                                     2024-2025
+TRINITY ACADEMY OF ENGINEERING
+
+           Department of Master of Computer Applications
+
+                 CERTIFICATE
+
+                              This is certify that the Major Project entitled
+
+          `HOME SELLING AND HOME RENTAL PORTAL"
+
+                                         has successfully submitted by
+                                                  Student Name
+
+                                            Exam Seat No: 4444
+
+under the supervision of Guide Name and it is approved for the partial fulfillment of the
+requirement of Savitribai Phule Pune University, for the award of the degree of Master of
+Computer Applications (Under Engineering).
+
+Date: / /
+Place: Pune
+
+       Guide Name   Dr. A. A. Bhusari  Dr. R. J. Patil
+     Project Guide               HOD      Principal
+Department of MCA                        TAE, Pune
+                    Department of MCA
+
+This project report has been examined by us as per the Savirtibai Phule Pune University, Pune,
+requirements at Trinity Academy of Engineering, Pune.
+
+Internal Examiner                      External Examiner
+                            Acknowledgement
+
+  I would like to acknowledge all the teacher and friends who ever helped and assisted me
+throughout my project work.
+First of all I would like to thank my respected guide Guide Name, introducing me throughout
+features needed. The time-to-time guidance, encouragement and valuable suggestion received
+from him are unforgettable in my life. This work would not have been possible without the
+enthusiastic response, insight and new idea from him.
+Furthermore, I would like to thank respected Dr. R. J. Patil, Principal and Dr. A. A.
+Bhusari, Head of Department of Master of Computer Applications for the guidance provided
+by them during my project work. I am also grateful to all the faculty members of Trinity
+Academy of Engineering, Pune for their support and cooperation. I would like to thank my
+lovely parent for time-to-time support and encouragement and valuable suggestion, and I would
+specify like to thank all my friends for their valuable suggestion and support. The acknowl-
+edgement world be incomplete without mention of the blessing of the almighty, which helped
+me in keeping high moral during difficult period.
+
+                                                                                                   Student Name
+                                                                                             Seat Number:4444
+                                                                                          Department of MCA
+
+                                                                 iii
+                    Declaration by the candidate
+
+I hereby declare that this project report titled "HOME SELLING AND HOME RENTAL
+PORTAL" submitted towards partial fulfillment of requirements for the degree of MCA is an
+authentic record of my work carried out under the guidance of Guide Name
+I further declare that the material obtained from other resources is duly acknowledged in
+this report.
+Date: / /
+Place: Pune
+
+                                                                                                   Student Name
+                                                                                             Seat Number:4444
+                                                                                          Department of MCA
+
+                                                                 iv
+                                   Abstract
+
+Finding the shortest route is very helpful using algorithms. Cost, time, and distance are a few
+variables that can affect which algorithm is the best for determining the shortest path. This
+study intends to model the optimum travel paths using Prim's algorithm, which is applica-
+ble in any tourism city. In this project, we will look at the cities which offer several tourist
+attractions. This approach is meant to assist tour firms in any tourism city in establishing
+the optimum travel paths. With the greedy approach for choosing a subset of edges so that a
+spanning tree is created and the weight of the edges is kept to a minimum, the prim's algorithm
+is explored for the shortest path problem. A decision must be feasible at every stage of the
+undirected graph because it is made based on what seems best at the moment and cannot
+be changed at a later stage. There are several shortest-path algorithms accessible. Based on
+the design of the algorithm, Prim's algorithm can be more effective and distance efficient than
+other well-known methods. This algorithm can make it simpler for individuals to find tourist
+attractions and boost tourism.
+Keywords: - Spanning tree, edge, greedy, shortest path, undirected graph.
+
+                                                                 v
+                      Contents
+
+Certificate                            ii
+
+Acknowledgements                       iii
+
+Declaration                            iv
+
+Abstract                               v
+
+List of Figures                        viii
+
+List of Tables                         ix
+
+List of Abbreviation                   x
+
+1 About Project                        1
+
+1.1 Title . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.2 Domain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.3 Aim . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.4 Objective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+1.5 Problem Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+2 Introduction                         3
+
+2.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+2.2 Motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+2.3 Project Scope & Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+2.4 Methodologies of Problem-Solving . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+3 Literature Survey                    4
+
+3.1 Similar Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+3.2 Tabulated Short Survey . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+3.3 Advantages and Disadvantages of Previous System . . . . . . . . . . . . . . . . 4
+
+3.4 Outcome of Literature Survey . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+4 Software Requirements Specification  5
+
+4.1 Functional Requirement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.1.1 System Feature: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.2 External Interface Requirement: . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.2.1 User Interface: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.2.2 Software Interface: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.2.3 Communication Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.3 Nonfunctional Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.3.1 Performance Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.3.2 Safety Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.3.3 Security Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.3.4 Software Quality Attributes . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.4 System Requirement: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.4.1 Database Requirement: . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+4.4.2 Software Requirement: . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+      4.4.3 Hardware Requirement: . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+4.5 Analysis Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+      4.5.1 SDLC Model to be applied . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+5 Project Plan               8
+
+5.1 Project Estimate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.1.1 Reconciled Estimates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.1.2 Project Resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.2 Risk Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.2.1 Risk Identification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.2.2 Risk Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+5.2.3 Overview of Risk Mitigation, Monitoring, Management . . . . . . . . . . 8
+
+6 System Design              9
+
+6.1 System Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+6.2 Data Flow Diagrams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+6.3 System Architecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+6.4 UML Diagrams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+7 Project Implementation     10
+
+7.1 Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+7.2 Methodologies of Problem solving . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+7.2.1 A. Data Collection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+7.2.2 B. Data conversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+7.2.3 C. Inputting the Algorithm Codes into the Matrix . . . . . . . . . . . . . 11
+
+7.3 Flow Diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+8 Software Testing           13
+
+8.1 Type of Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+8.2 Test Cases & Test Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+9 Result                     14
+
+9.1 Experimental Setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+9.2 Important Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+10 Conclusion & Future Work  20
+
+10.1 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+10.2 Future Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+10.3 Applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+References                   21
+
+Internship Report            22
+
+Publication                  23
+
+Plagiarism Report            24
+List of Figures
+
+    1 Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+    2 Matrix representation for the input to Prim's algorithm . . . . . . . . . . . . . . 10
+    3 Input . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+    4 OP1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+    5 OP2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+    6 OP3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+    7 OP4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+List of Tables
+List of Abbreviation
+
+HSHRP Home Selling and Home Rental Portal
+IDS Intrusion Detection System
+PHP Hypertext Preprocessor
+TCP Transmission Control Protocol
+
+                                                                 x
+                                                                       Home Selling And Home Rental Portal
+
+1 About Project
+
+1.1 Title
+  The title of our project is "HOME SELLING AND HOME RENTAL PORTAL"
+
+1.2 Domain
+  Social Work
+
+1.3 Aim
+    · Simplify property transactions by providing a user-friendly platform [1].
+    · Streamline the process of buying, selling, and renting properties.
+    · Connect property owners with potential buyers and renters efficiently.
+    · Enhance convenience and accessibility in the real estate market.
+    · Provide advanced search functionalities and secure communication channels for seamless
+      property transactions. [2].
+
+1.4 Objective
+
+· Enhance Visibility: Create a centralized database where rescue organizations can show-
+  case their available pets, including relevant details such as breed, age, and medical history.
+  This will increase the visibility of available pets and make it easier for potential adopters
+  to find suitable matches[3].
+
+· Streamline Matching Process: Develop an efficient search and filtering system that enables
+  potential adopters to search for pets based on their preferences and requirements. By
+  streamlining the matching process, the project aims to connect adopters with pets that
+  align with their specific needs.
+
+· Facilitate Communication: Establish a communication platform that allows for efficient
+  and transparent communication between rescue organizations and potential adopters.
+  This will enable better understanding, exchange of information, and the opportunity to
+  address any queries or concerns, ultimately enhancing the adoption experience for both
+  parties [4].
+
+· Promote Responsible Pet Ownership: Provide potential adopters with essential informa-
+  tion about the pets they are interested in, including medical history, behavioural traits,
+  and specific needs. This will promote responsible pet ownership by ensuring that adopters
+  have a comprehensive understanding of the pet's requirements and can make informed
+  decisions.
+
+· Increase Successful Adoptions: By improving the accessibility and transparency of the
+  pet adoption process, the project aims to increase the number of successful adoptions.
+  The ultimate objective is to find loving homes for as many animals as possible and reduce
+  the population of homeless pets [5].
+
+1  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+    · Support Animal Rescue Organizations: The project aims to support and empower animal
+      rescue organizations by providing them with a user-friendly platform that enhances their
+      reach, visibility, and ability to connect with potential adopters. By assisting these organi-
+      zations, the project seeks to strengthen the overall ecosystem of pet rescue and adoption
+      [6].
+
+1.5 Problem Statement
+
+  The problem addressed by the Home Selling and Home Rental Portal using PHP and MySQL
+is the complexity and inefficiency in property transactions. The portal aims to streamline
+property transactions by providing a user-friendly platform that connects property owners with
+potential buyers and renters, offers advanced search functionalities, and ensures secure commu-
+nication. The traditional process lacks a centralized platform, making it difficult for property
+owners to manage listings and for buyers and renters to find suitable properties. Limited access
+to property information, inefficient communication channels, and manual interactions further
+hinder the process. It addresses the need for a simplified, efficient, and convenient solution in
+the real estate market.
+
+2  Department of MCA
+                                         Home Selling And Home Rental Portal
+
+2 Introduction
+
+2.1 Overview
+2.2 Motivation
+2.3 Project Scope & Limitations
+2.4 Methodologies of Problem-Solving
+
+                                      3  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+3 Literature Survey
+
+3.1 Similar Work
+3.2 Tabulated Short Survey
+3.3 Advantages and Disadvantages of Previous System
+3.4 Outcome of Literature Survey
+
+4  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+4 Software Requirements Specification
+
+4.1 Functional Requirement
+
+4.1.1 System Feature:
+
+1.Data set of tourist sites ( longitude and latitude)
+2.Above data set converted in km and save it into post sql.
+
+4.2 External Interface Requirement:
+
+4.2.1 User Interface:
+
+1. CPU,Keyboard ,Laptop
+2. Core i3 processor
+3. 4GB RAM
+4. Graphic Card.
+
+4.2.2 Software Interface:
+
+1. Microsoft Windows 7
+2. Any version of internet explorer (Chrome,Firefox)
+3. Python
+
+4.2.3 Communication Interfaces
+
+4.3 Nonfunctional Requirements
+
+4.3.1 Performance Requirements
+4.3.2 Safety Requirements
+4.3.3 Security Requirements
+4.3.4 Software Quality Attributes
+
+4.4 System Requirement:
+
+4.4.1 Database Requirement:
+
+1. PostSQL.
+
+4.4.2 Software Requirement:
+
+1. Microsoft Windows11.
+2. Any version of internet exlporer.
+3. Python.
+4. Javascript.
+5. Visual studio.
+
+5  Department of MCA
+                                Home Selling And Home Rental Portal
+
+4.4.3 Hardware Requirement:
+
+1. Laptop, CPU, Keyboard
+2. Core i3 processor
+3. 4GB RAM
+
+                             6  Department of MCA
+                                   Home Selling And Home Rental Portal
+
+4.5 Analysis Model
+
+4.5.1 SDLC Model to be applied
+
+                                Figure 1: Model
+
+                                7                Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+5 Project Plan
+
+5.1 Project Estimate
+
+5.1.1 Reconciled Estimates
+5.1.2 Project Resources
+
+5.2 Risk Management
+
+5.2.1 Risk Identification
+5.2.2 Risk Analysis
+5.2.3 Overview of Risk Mitigation, Monitoring, Management
+
+8  Department of MCA
+                            Home Selling And Home Rental Portal
+
+6 System Design
+
+6.1 System Architecture
+6.2 Data Flow Diagrams
+6.3 System Architecture
+6.4 UML Diagrams
+
+                         9  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+7 Project Implementation
+
+7.1 Implementation
+7.2 Methodologies of Problem solving
+
+  The technique for this study was composed of three stages: data collection, data conversion,
+and application of the converted information to the prim's method programming code.
+
+7.2.1 A. Data Collection
+
+  For efficiency and simplicity, we have collected more than 100 tourism sites and narrowed
+them down to the 24 most popular sites. This strategy adheres to the fundamental principle
+of increasing business profitability via effectiveness based simply on the most popular sites. A
+list of locations represents an array of vertices in prim's method, where the group of distances
+refers to a group of edges [7].
+
+  The data is acquired using geolocation (latitude and longitude).
+
+                 Figure 2: Matrix representation for the input to Prim's algorithm
+
+7.2.2 B. Data conversion
+
+  This section comprises two conversions: 1) translating the geolocation data to kilometres
+using a normal earth radius of 6367.0 km, and 2) turning the data to an adjacency matrix.
+
+  In Fig,which is a snapshot of the data matrix, the kilometers between two sites are shown
+[8].
+
+10  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+7.2.3 C. Inputting the Algorithm Codes into the Matrix
+
+  The Prim algorithm is fed two inputs, and in this case, the vertices represent the sites, and
+the edges reveal the distance between any two places. Figure 5 depicts the data entered of
+the corners (the locations) and edges (the spacing) when executing the computer programmes.
+Due to the size constraints of this document, the photo is missing all of the array values.
+
+11  Department of MCA
+                      Home Selling And Home Rental Portal
+
+7.3 Flow Diagram
+
+                  12  Department of MCA
+                                   Home Selling And Home Rental Portal
+
+8 Software Testing
+
+8.1 Type of Testing
+8.2 Test Cases & Test Results
+
+                               13  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+9 Result
+
+    · To set up best traveling path in any tourism city.
+    · To improve economies in terms of fuel and transportation costs
+    · To visit maximum tourist places in a city with minimum transportation
+
+14  Department of MCA
+                            Home Selling And Home Rental Portal
+
+9.1 Experimental Setup
+
+                        15  Department of MCA
+    Home Selling And Home Rental Portal
+
+16  Department of MCA
+                      Home Selling And Home Rental Portal
+Figure 3: Input
+
+17  Department of MCA
+                     Home Selling And Home Rental Portal
+Figure 4: OP1
+
+Figure 5: OP2
+
+18             Department of MCA
+                                         Home Selling And Home Rental Portal
+                    Figure 6: OP3
+
+                    Figure 7: OP4
+
+9.2 Important Code
+
+                    19             Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+10 Conclusion & Future Work
+
+10.1 Conclusion
+The key difficulty, as indicated in the introduction, is determining the most effective tour
+itineraries, or in this example, the shortest paths of short passes. This study uses Prim's
+algorithm and uses 6 or 7 tourism locations in cities throughout INDIA as part of the initial
+inputs to try to find an answer to such a challenge. These original inputs are also utilised and
+turned into a two-dimensional proximity matrix as the input to the Prim's method. Eventually,
+the algorithm can solve the problem by attempting to find the shortest pathways of a weeklong
+journey.
+
+10.2 Future Work
+10.3 Applications
+
+20  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+References
+
+[1] N. R. Latha, G. Shyamala, and G. R. Prasad, "Exploring the parallel implementations of
+    the three classical mst algorithms," in 2017 International Conference on Inventive Com-
+    munication and Computational Technologies (ICICCT), Coimbatore, India, 2017.
+
+[2] JavaTpoint, "Minimum Spanning Tree," 2019. [Online]. Available: https://www.
+    javatpoint.com/minimum-spanning-tree-introduction
+
+[3] uiu Feng and Y. Cheng, "Short Text Sentiment Analysis Based on Multi-Channel CNN
+    with Multi-Head Attention Mechanism," IEEE Access, vol. 9, pp. 19 854­19 863, 2021.
+    [Online]. Available: https://doi.org/10.1109/ACCESS.2021.3054521
+
+[4] A. A, H. J, and U. J, Data Structures and Algorithms. Pearson Education, 2015.
+
+[5] Y. Zhang and L. Wang, "A New Formulation for Multi-Modal Shortest Path Problem with
+    Fuzzy Arc Travel Times," in 2015 12th International Conference on Fuzzy Systems and
+    Knowledge Discovery (FSKD), Zhangjiajie, China, 2015.
+
+[6] W. Wang, Y. Huang, and S. Guo, "Design and Implementation of GPU-Based Prim's
+    Algorithm," International Journal of Modern Education and Computer Science, vol. 4, pp.
+    55­62, 2011. [Online]. Available: http://www.mecs-press.org
+
+[7] F. Huang, P. Gao, and Y. Wang, "Comparison of Prim and Kruskal on Shanghai and
+    Shenzhen 300 Index Hierarchical Structure Tree," in 2009 International Conference on
+    Web Information Systems and Mining, Shanghai, China, 2009.
+
+[8] A. Khan, A. A. Aesha, and J. Sarker, "A New Algorithmic Approach to Finding Mini-
+    mum Spanning Tree," in 2018 4th International Conference on Electrical Engineering and
+    Information & Communication Technology (iCEEiCT), January 2019.
+
+21  Department of MCA
+                       Home Selling And Home Rental Portal
+
+Internship Report
+
+                   22  Department of MCA
+                                                                       Home Selling And Home Rental Portal
+
+Publications
+
+Details of paper publication: name of the conference/journal, comments of reviewers, certifi-
+cate, paper
+
+23  Department of MCA
+                       Home Selling And Home Rental Portal
+
+Plagiarism Report
+
+                   24  Department of MCA
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+  <w:body>
+    <w:p><w:r><w:t>SYNOPSIS REPORT ON</w:t></w:r></w:p>
+    <w:p><w:r><w:t>AI RECIPE GENERATOR</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Submitted to</w:t></w:r></w:p>
+    <w:p><w:r><w:t>In partial fulfilment of the requirement for the award of degree of</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[Your Degree Name]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[Department Name]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[College Name]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Submitted By</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[Your Name]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[Roll Number]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Under the Guidance of</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[Guide Name]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>DEPARTMENT OF [YOUR DEPARTMENT NAME]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[COLLEGE NAME]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[College Address]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Academic Year: 2025-2026</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>Department of [Department Name]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Project Based Learning</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Project Group No: [Group Number]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Academic Year: 2025-2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Semester: [Semester]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Roll No | Name | Email ID</w:t></w:r></w:p>
+    <w:p><w:r><w:t>[Roll No] | [Your Name] | [Your Email]</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Title of Project: AI Recipe Generator</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Domain / Technologies: React.js, Vite, Tailwind CSS, Node.js, Express.js, PostgreSQL, Google GenAI API, Axios</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>1. Problem Statement</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Many people face difficulty in deciding what to cook using the ingredients available at home. Traditional recipe platforms usually depend on manual search and do not effectively consider pantry items, dietary restrictions, preferred cuisine, servings, or cooking time. In addition, users often manage meal planning and shopping lists separately, which increases effort and confusion. Therefore, there is a need for an intelligent system that can automatically generate suitable recipes, manage pantry stock, support meal planning, and simplify grocery preparation in a single platform.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>2. Aim and Objectives of the Project</w:t></w:r></w:p>
+    <w:p><w:r><w:t>The aim of this project is to design and develop an intelligent web-based AI Recipe Generator that helps users generate personalized recipes using available ingredients, manage pantry items, plan meals, and organize shopping lists efficiently.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>The objectives of this project are:</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To develop a web-based application that generates recipes using AI.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To allow users to enter ingredients manually or use pantry items for recipe generation.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To support dietary restrictions, cuisine preferences, servings, and cooking-time selection.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To manage pantry items with quantity, unit, category, and expiry date.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To store recipes, user preferences, and account details securely in a database.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To provide a meal planner for organizing weekly meals.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To create and manage shopping lists from meal plans or manual entries.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- To provide an easy-to-use dashboard for tracking recipes, pantry items, and meals.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>3. Steps to do the Project / Methodology</w:t></w:r></w:p>
+    <w:p><w:r><w:t>1. User Registration and Login: The user creates an account and logs into the system.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>2. Profile and Preference Setup: The user sets dietary restrictions, preferred cuisines, default servings, and measurement units.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>3. Pantry Item Management: The user adds pantry items with quantity, unit, category, and expiry date.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>4. Ingredient Selection: The user either enters ingredients manually or selects to use pantry ingredients.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>5. Recipe Request Submission: The frontend sends ingredient and preference data to the backend using API calls.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>6. Prompt Preparation: The backend processes the input and prepares a structured request for the AI service.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>7. AI Recipe Generation: The AI engine generates a recipe including title, description, ingredients, instructions, and nutrition details.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>8. Recipe Display: The generated recipe is displayed on the frontend for the user to review.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>9. Recipe Saving: The user can save the generated recipe to their collection.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>10. Meal Planning: The user can assign recipes to specific days and meal types such as breakfast, lunch, or dinner.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>11. Shopping List Preparation: Ingredients required for meals are added to a categorized shopping list.</w:t></w:r></w:p>
+    <w:p><w:r><w:t>12. Pantry Update and Reuse: Purchased items can later be managed in the pantry module and reused for future recipe generation.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>Technology Stack</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Frontend: React.js, Vite, Tailwind CSS</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Backend: Node.js, Express.js</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Database: PostgreSQL</w:t></w:r></w:p>
+    <w:p><w:r><w:t>AI Integration: Google GenAI API</w:t></w:r></w:p>
+    <w:p><w:r><w:t>API Handling: Axios</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Authentication: JWT support / secured login architecture</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Utilities: date-fns</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>Existing System</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Existing recipe applications mainly provide static recipes that users must search manually. Most systems do not integrate pantry-based ingredient tracking, intelligent recipe generation, or weekly meal planning in one place. Users often need separate tools for recipes, shopping lists, and pantry management, which is time-consuming and less efficient.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>Proposed System</w:t></w:r></w:p>
+    <w:p><w:r><w:t>The proposed system is an AI-powered recipe generation and meal management platform. It allows users to generate recipes from available ingredients and preferences, store them for future use, plan meals on a weekly basis, and prepare shopping lists accordingly. The system combines recipe generation, pantry tracking, meal scheduling, and grocery management into one unified application, making cooking more convenient and reducing food waste.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>System Modules</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- User Authentication Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Dashboard Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Pantry Management Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- AI Recipe Generation Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Recipe Management Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Meal Planner Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Shopping List Module</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- User Preferences Module</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>4. Hardware and Software to be Used</w:t></w:r></w:p>
+    <w:p><w:r><w:t>4.1 Hardware</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Desktop computer or laptop with minimum 4 GB RAM</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Processor: Intel Core i5 or equivalent</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Storage: Minimum 256 GB</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Internet connectivity for API communication</w:t></w:r></w:p>
+    <w:p><w:r><w:t>4.2 Software</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Operating System: Windows / Linux / macOS</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Code Editor: Visual Studio Code</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Browser: Google Chrome / Microsoft Edge</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Runtime Environment: Node.js</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Database Server: PostgreSQL</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>5. ER Diagram</w:t></w:r></w:p>
+    <w:p><w:r><w:t>The major entities used in the project are Users, User Preferences, Pantry Items, Recipes, Recipe Ingredients, Recipe Nutrition, Meal Plans, and Shopping Lists. These entities are connected through primary and foreign key relationships such as user_id and recipe_id. The ER diagram represents how users manage recipes, pantry data, meal planning, and shopping information within the system.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>6. Application and Future Scope of Project</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Applications</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Home users who want recipe suggestions from available ingredients</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Students and professionals planning daily or weekly meals</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Families managing groceries and pantry stock</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Health-conscious users following dietary restrictions</w:t></w:r></w:p>
+    <w:p><w:r><w:t>- Smart food-planning and kitchen-assistant systems</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Future Scope</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Future improvements may include image-based ingredient recognition, voice-input recipe generation, multilingual support, calorie-based and health-based recommendations, mobile application deployment, recipe image generation, expiry alerts, and direct grocery ordering integration. The project can also be extended with advanced personalization based on cooking history and user behavior.</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>7. Project Timeline (Gantt Chart / PERT Chart)</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Project Initiation - 01/01/2026 to 03/01/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Requirement Analysis - 04/01/2026 to 08/01/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>UI/UX Design - 09/01/2026 to 15/01/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Database Design - 16/01/2026 to 20/01/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Frontend Development - 21/01/2026 to 01/02/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Backend Development - 02/02/2026 to 13/02/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>AI Integration - 14/02/2026 to 21/02/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Testing and Debugging - 22/02/2026 to 28/02/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Documentation - 01/03/2026 to 05/03/2026</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Final Review and Deployment - 06/03/2026 to 10/03/2026</w:t></w:r></w:p>
+    <w:p/>
+    <w:p><w:r><w:t>Conclusion</w:t></w:r></w:p>
+    <w:p><w:r><w:t>The AI Recipe Generator is a smart and practical solution for modern cooking and meal planning. By combining React.js, Node.js, PostgreSQL, and AI integration, the project provides a unified platform for generating recipes, managing pantry ingredients, planning meals, and maintaining shopping lists. It reduces manual effort, improves convenience, and helps users make better use of available ingredients in an organized and efficient way.</w:t></w:r></w:p>
+    <w:sectPr>
+      <w:pgSz w:w="12240" w:h="15840"/>
+      <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

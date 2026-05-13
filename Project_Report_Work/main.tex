@@ -1,0 +1,214 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=0.70in, bottom=0.70in, left=0.8in,right=0.80in]{geometry} 
+\usepackage[pdftex]{graphicx} 
+\usepackage[final]{pdfpages} 
+\usepackage{float} 
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0}}
+%\usepackage{pslatex} 
+\usepackage{array} 
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{setspace}
+%\usepackage{float}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{placeins}
+\usepackage{microtype}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{pgfpages}
+\usepackage[font=small,labelfont=bf]{caption}
+\def\figurename{\textbf{Figure }}
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+%for creating Abbreviation
+\usepackage{acronym}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+ 
+
+%For the header and footer
+\usepackage{fancyhdr}
+%\fancypagestyle{fancy}{%
+%\fancyfoot[L]{\emph{Department of Computer Engineering, SHORT NAME OF COLLEGE, Pune}} % except the center
+%\fancyfoot[R]{\thepage}
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+%}
+
+\pagestyle{fancy}
+
+\rhead{\large{Automated Cooking Assistant With AI}}
+\fancyhead[L]{}
+\fancyfoot[R]{\emph{Department of MCA}}
+%\cfoot{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%Page Border
+% 
+\addto\captionsenglish{\renewcommand*\contentsname{\centering{Contents}}}
+\addto\captionsenglish{
+\renewcommand{\listfigurename}{\textit{List of Figures}}
+}
+
+\addto\captionsenglish{
+\renewcommand{\listtablename}{\textit{List of Tables}}
+}
+
+
+
+%GLOBAL SETTINGS OVER, DOCUMENT BEGINS
+\begin{document}
+\justifying
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlist[itemize]{leftmargin=*, itemsep=3pt, topsep=3pt}
+\setlist[enumerate]{leftmargin=*, itemsep=3pt, topsep=3pt}
+\renewcommand{\arraystretch}{1.18}
+%\renewcommand\bibname{References}
+%\lhead{ }
+
+%FROM HERE YOUR PAGES START GETTING ADDED
+%\pgfpagesuselayout{boxed}
+%\setlength{\parindent}{1cm}
+% includes the cover page
+%\pgfpagesuselayout{boxed}
+%\input{project/cover.tex}
+\pagenumbering{roman} %numbering before main content starts
+
+\input{title.tex}
+\newpage
+
+% includes the certificate page
+\input{certificate.tex} 
+\addcontentsline{toc}{section}{\textit{Certificate}}
+\newpage
+
+% includes the acknowledgements page
+\input{acknowledgements.tex}
+\addcontentsline{toc}{section}{\textit{Acknowledgements}}
+\newpage
+\input{Declaration.tex}
+\addcontentsline{toc}{section}{\textit{Declaration}}
+\newpage
+
+\input{abstract.tex} % adds the Research Methodology page
+\addcontentsline{toc}{section}{\textit{Abstract}}
+\newpage
+%\stepcounter{page}
+
+
+%TABLE OF CONTENTS AND LIST OF FIGURES ARE AUTOMATICALLY ADDED BY FOLLOWING COMMANDS
+%ADD FIGURE OF TABLES IF YOU NEED TO, CHECK DOCUMENTATION
+
+%To reset the Header & Footer for TOC and LOF
+\pagestyle{empty}
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+\tableofcontents % adds Index Page 
+\newpage
+\listoffigures % adds List of Figures
+\newpage
+\listoftables  % adds List of Tables
+%\addtocontents{lof}{}
+\newpage
+\input{Abbreviation.tex}
+\addcontentsline{toc}{section}{\textit{List of Abbreviation}}
+\newpage
+\cleardoublepage
+
+%And reset back the settings we choose for Header and Footer
+\pagestyle{fancy}
+
+\newpage
+\pagenumbering{arabic} %reset numbering to normal for the main content
+
+\input{About_Project.tex} % adds the introduction page
+\newpage
+\input{Introduction.tex}
+\newpage
+
+\input{literature-survey.tex} % adds the Literature Survey page
+
+\newpage
+%\input{project/req-analysis.tex}
+%\input{project/system-design.tex}
+\newpage
+\input{SRS.tex}
+\newpage
+\input{Project_Plan.tex}
+\newpage
+\input{System_Design.tex}
+\newpage
+\input{advantageandapplication.tex}
+%\input{project/implementation.tex} % adds the Project Design
+%\input{project/screenshots.tex}
+\newpage
+\input{Software_Testing.tex}
+\newpage
+\input{Result.tex}
+\newpage
+\input{conclusion.tex} % adds the Scheduling and Planning page
+\newpage
+
+%\input{ref.tex} % adds the References page
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{9}
+
+\bibitem{allrecipes}
+Allrecipes, ``Recipes, Dinner Ideas and Menus.'' [Online]. Available: \url{https://www.allrecipes.com/}. Accessed: May 11, 2026.
+
+\bibitem{mealime}
+Mealime, ``Meal Planning App.'' [Online]. Available: \url{https://www.mealime.com/}. Accessed: May 11, 2026.
+
+\bibitem{react}
+Meta Open Source, ``React Documentation.'' [Online]. Available: \url{https://react.dev/}. Accessed: May 11, 2026.
+
+\bibitem{vite}
+Vite, ``Vite Documentation.'' [Online]. Available: \url{https://vite.dev/}. Accessed: May 11, 2026.
+
+\bibitem{nodejs}
+OpenJS Foundation, ``Node.js Documentation.'' [Online]. Available: \url{https://nodejs.org/en/docs}. Accessed: May 11, 2026.
+
+\bibitem{express}
+Express, ``Express.js Documentation.'' [Online]. Available: \url{https://expressjs.com/}. Accessed: May 11, 2026.
+
+\bibitem{postgresql}
+PostgreSQL Global Development Group, ``PostgreSQL Documentation.'' [Online]. Available: \url{https://www.postgresql.org/docs/}. Accessed: May 11, 2026.
+
+\bibitem{sequelize}
+Sequelize, ``Sequelize Documentation.'' [Online]. Available: \url{https://sequelize.org/docs/v6/}. Accessed: May 11, 2026.
+
+\bibitem{jwt}
+Auth0, ``JSON Web Tokens Introduction.'' [Online]. Available: \url{https://jwt.io/introduction}. Accessed: May 11, 2026.
+
+\bibitem{googleai}
+Google AI for Developers, ``Gemini API Documentation.'' [Online]. Available: \url{https://ai.google.dev/}. Accessed: May 11, 2026.
+
+\bibitem{tailwind}
+Tailwind Labs, ``Tailwind CSS Documentation.'' [Online]. Available: \url{https://tailwindcss.com/docs}. Accessed: May 11, 2026.
+
+\end{thebibliography}
+
+
+\newpage
+\input{Internship.tex}
+\addcontentsline{toc}{section}{Internship Report}
+\newpage
+\input{Publications.tex}
+\addcontentsline{toc}{section}{Publication}
+\newpage
+\input{Plagiarism Report.tex}
+\addcontentsline{toc}{section}{Plagiarism Report}
+\end{document}

@@ -1,0 +1,32 @@
+\section{Introduction}
+
+\subsection{Overview}
+The AI Recipe Generator is a full-stack web application that helps users create recipes from available ingredients and personal food preferences. The frontend is built with React and Vite, while the backend uses Express.js, PostgreSQL, Sequelize, JWT authentication, and AI service integration.
+
+\subsection{Motivation}
+Food waste and meal decision fatigue are common daily problems. A user may have ingredients available but may not know how to combine them into a complete dish. This project makes cooking decisions faster, more personal, and better organized.
+
+\subsection{Project Scope \& Limitations}
+\textbf{Project Scope}
+
+The application includes user registration, login, profile management, preference management, pantry tracking, recipe generation, saved recipes, meal planning, and shopping list support.
+
+The frontend provides pages for Login, Signup, Dashboard, Recipe Generator, Pantry, My Recipes, Meal Planner, Shopping List, Recipe Details, and Settings. The backend provides REST APIs for authentication, user data, preferences, pantry records, recipes, and planning features.
+
+The database stores structured data such as users, preferences, pantry items, recipes, ingredients, nutrition details, meal plans, and shopping lists.
+
+\textbf{Project Limitations}
+\begin{itemize}
+\item Recipe quality depends on the AI model, entered ingredients, and selected preferences.
+\item Internet access and valid API configuration are required for real-time AI generation.
+\item Nutrition and diet suggestions are supportive and should not replace professional medical advice.
+\item Production deployment would require additional security review, performance tuning, and monitoring.
+\item Advanced features such as barcode scanning, voice commands, image-based ingredient detection, and online grocery ordering are outside the current scope.
+\end{itemize}
+
+\subsection{Methodology of Problem Solving}
+The project follows a modular development approach. First, the main user problem is identified: users need quick, personalized recipe ideas based on available ingredients. The system requirements are then divided into modules such as authentication, recipe generation, pantry management, saved recipes, meal planner, shopping list, and settings.
+
+The frontend is designed in React to provide a responsive interface, while the backend is implemented in Node.js and Express.js to handle API requests. PostgreSQL stores user accounts, preferences, pantry items, recipes, meal plans, and shopping lists.
+
+After login, the user enters ingredients or selects pantry items. Preferences such as cuisine, diet, serving size, and cooking time are sent to the AI service. The generated recipe is displayed with ingredients, instructions, time, difficulty, and nutrition details. The user can then save the recipe, plan it for a meal, or add missing ingredients to a shopping list. Important workflows are tested iteratively to improve correctness and usability.

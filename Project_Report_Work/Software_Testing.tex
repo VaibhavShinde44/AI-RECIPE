@@ -1,0 +1,45 @@
+\section{Software Testing}
+
+Software testing verifies that the AI Recipe Generator works according to the project requirements. The testing focused on authentication, protected access, recipe generation, pantry management, meal planning, shopping list creation, and profile updates.
+
+\subsection{Testing Objectives}
+\begin{itemize}
+\item To verify that all implemented modules work according to the requirements.
+\item To check user registration, login, and protected page access.
+\item To validate recipe generation using user inputs.
+\item To check database storage and retrieval of user data.
+\item To ensure the application is user-friendly and responsive.
+\end{itemize}
+
+\subsection{Test Cases}
+\begin{table}[h]
+\centering
+\caption{Test Cases}
+\begin{tabularx}{\textwidth}{|p{1.5cm}|X|X|p{2cm}|}
+\hline
+\textbf{Test ID} & \textbf{Test Case} & \textbf{Expected Result} & \textbf{Status} \\
+\hline
+T1 & User registration with valid details. & Account should be created successfully. & Pass \\
+\hline
+T2 & User login with valid credentials. & User should log in and receive JWT token. & Pass \\
+\hline
+T3 & Login with invalid password. & Error message should be displayed. & Pass \\
+\hline
+T4 & Access protected page without token. & Access should be denied. & Pass \\
+\hline
+T5 & Generate recipe using ingredients. & Recipe should be generated successfully. & Pass \\
+\hline
+T6 & Save generated recipe. & Recipe should be saved in database. & Pass \\
+\hline
+T7 & Add pantry item. & Pantry item should be stored successfully. & Pass \\
+\hline
+T8 & Create meal plan. & Meal plan should be created successfully. & Pass \\
+\hline
+T9 & Generate shopping list. & Shopping list should be displayed correctly. & Pass \\
+\hline
+T10 & Update user profile. & Profile details should be updated successfully. & Pass \\
+\hline
+\end{tabularx}
+\end{table}
+
+\FloatBarrier

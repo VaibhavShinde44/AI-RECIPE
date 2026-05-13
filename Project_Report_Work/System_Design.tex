@@ -1,0 +1,63 @@
+\section{System Design}
+
+This section presents the main design diagrams of the proposed AI Recipe Generator system.
+
+\subsection{System Architecture}
+The system architecture shows the interaction between the React frontend, Express backend, PostgreSQL database, authentication layer, and AI service.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth,height=0.45\textheight,keepaspectratio]{Gemini_Generated_Image_2dzvgc2dzvgc2dzv.png}
+    \caption{System Architecture}
+    \label{fig:sys_arch}
+\end{figure}
+
+\FloatBarrier
+\subsection{Data Flow Diagram}
+The data flow diagram shows how user input, pantry data, recipe requests, generated output, and stored records move through the system.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth,height=0.45\textheight,keepaspectratio]{Gemini_Generated_Image_6c1usc6c1usc6c1u.png}
+    \caption{Data Flow Diagram}
+    \label{fig:dfd}
+\end{figure}
+
+\FloatBarrier
+\subsection{ER Diagram}
+The ER diagram represents the major database entities and relationships used in the project.
+
+\begin{figure}[H]
+\centering
+\fbox{%
+\begin{minipage}{0.92\textwidth}
+\centering
+\small
+\begin{tabular}{c c c}
+\fbox{\begin{minipage}{0.26\textwidth}\centering\textbf{Users}\\user\_id\\name\\email\\password\end{minipage}}
+&
+$1:N$
+&
+\fbox{\begin{minipage}{0.26\textwidth}\centering\textbf{User Preferences}\\preference\_id\\diet\\allergies\\cuisine\end{minipage}}
+\\[1.2cm]
+\fbox{\begin{minipage}{0.26\textwidth}\centering\textbf{Pantry Items}\\pantry\_id\\ingredient\\quantity\\user\_id\end{minipage}}
+&
+$N:1$
+&
+\fbox{\begin{minipage}{0.26\textwidth}\centering\textbf{Recipes}\\recipe\_id\\title\\instructions\\user\_id\end{minipage}}
+\\[1.2cm]
+\fbox{\begin{minipage}{0.26\textwidth}\centering\textbf{Meal Plans}\\plan\_id\\date\\meal\_type\\recipe\_id\end{minipage}}
+&
+$N:1$
+&
+\fbox{\begin{minipage}{0.26\textwidth}\centering\textbf{Shopping List}\\list\_id\\item\\quantity\\user\_id\end{minipage}}
+\end{tabular}
+
+\vspace{0.5cm}
+Users maintain preferences, pantry items, recipes, meal plans, and shopping list records. Recipes are connected with meal plans, while pantry and shopping data support ingredient management.
+\end{minipage}}
+\caption{ER Diagram}
+\label{fig:er_diagram}
+\end{figure}
+
+\FloatBarrier

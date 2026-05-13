@@ -1,0 +1,41 @@
+\section{Implementation}
+
+The AI Recipe Generator is implemented as a web-based application using a React.js frontend and a Node.js backend. The system allows users to register, log in, enter ingredients, set food preferences, generate recipes using AI, save recipes, manage pantry items, prepare meal plans, and create shopping lists.
+
+\subsection{Frontend Implementation}
+
+The frontend is developed using React.js with Vite for fast development and build support. Tailwind CSS is used for designing responsive and user-friendly pages. React Router is used for navigation between pages such as Login, Signup, Dashboard, Recipe Generator, Pantry, Meal Planner, My Recipes, Shopping List, and Settings.
+
+Axios is used to communicate with the backend API. The JWT token received after login is stored on the client side and sent with protected API requests.
+
+\subsection{Backend Implementation}
+
+The backend is developed using Node.js and Express.js. It provides REST API endpoints for user registration, login, profile management, preferences, and other application features. Express middleware is used for JSON parsing, CORS handling, and authentication.
+
+JWT authentication is used to protect private routes. Passwords are hashed before storing in the database to improve security.
+
+\subsection{Database Implementation}
+
+PostgreSQL is used as the database for storing user data, preferences, recipes, pantry items, meal plans, and shopping lists. Sequelize ORM is used to define models and perform database operations. Primary keys, foreign keys, and constraints are used to maintain data integrity.
+
+\subsection{AI Integration}
+
+The system integrates Google GenAI/Gemini API for recipe generation. User-provided ingredients, cuisine type, dietary restrictions, cooking time, and serving size are sent to the AI service. The generated recipe is returned and displayed to the user.
+
+\subsection{Authentication Implementation}
+
+User authentication is handled using JWT tokens. After successful login, the server generates a token and sends it to the frontend. This token is included in the Authorization header for protected requests.
+
+\subsection{Module Implementation}
+
+The main modules implemented in the system are:
+
+\begin{itemize}
+    \item User Registration and Login
+    \item User Profile and Preferences
+    \item Recipe Generation
+    \item Pantry Management
+    \item Saved Recipes
+    \item Meal Planning
+    \item Shopping List Management
+\end{itemize}

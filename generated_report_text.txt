@@ -1,0 +1,551 @@
+               A MAJOR PROJECT REPORT
+
+                                         ON
+
+            "AI RECIPE GENERATOR"
+
+                                  Submitted to
+
+         SAVITRIBAI PHULE PUNE UNIVERSITY
+
+  In Partial Fulfilment of the Requirement for the Award of
+
+MASTER OF COMPUTER APPLICATIONS (Under Engineering)
+
+                                         BY
+                              Student Name
+                             Exam Seat No: 4444
+
+                          UNDER THE GUIDANCE OF
+                                Guide Name
+
+    DEPARTMENT OF MASTER OF COMPUTER APPLICATIONS
+                TRINITY ACADEMY OF ENGINEERING
+                     Kondhwa Annex, Pune - 411048
+                                    2024-2025
+                       TRINITY ACADEMY OF ENGINEERING
+
+                   Department of Master of Computer Applications
+
+                                 CERTIFICATE
+
+                    This is to certify that the Major Project entitled
+
+                               "AI RECIPE GENERATOR"
+
+                                has been successfully submitted by
+                                             Student Name
+
+                                             Exam Seat No: 4444
+
+under the supervision of Guide Name and it is approved for the partial fulfillment
+of the requirement of Savitribai Phule Pune University, for the award of the degree
+of Master of Computer Applications (Under Engineering).
+
+Date: / /
+Place: Pune
+
+Guide Name         Dr. A. A. Bhusari  Dr. R. J. Patil
+ Project Guide                 HOD         Principal
+
+Internal Examiner                          External Examiner
+                   ii
+                              Acknowledgement
+
+I would like to acknowledge all the teachers, faculty members, friends, and family
+members who helped and assisted me throughout my project work.
+First of all I would like to thank my respected guide Guide Name for time-to-time
+guidance, encouragement, valuable suggestions, and support during the development of
+this project. This work would not have been possible without the enthusiastic response
+and insight received from my guide.
+Furthermore, I would like to thank respected Dr. R. J. Patil, Principal, and Dr. A. A.
+Bhusari, Head of Department of Master of Computer Applications, for the guidance
+provided during my project work. I am also grateful to all the faculty members of
+Trinity Academy of Engineering, Pune for their cooperation.
+I would like to thank my parents for their constant support and encouragement, and all
+my friends for their valuable suggestions and help during the project.
+
+                                                                                                  Student Name
+                                                                                                  Seat Number: 4444
+                                                                                                  Department of MCA
+
+                                                                     iii
+                   Declaration by the candidate
+
+I hereby declare that this project report titled "AI RECIPE GENERATOR" submitted
+towards partial fulfillment of requirements for the degree of MCA is an authentic
+record of my work carried out under the guidance of Guide Name.
+I further declare that the material obtained from other resources is duly acknowledged
+in this report.
+
+Date: / /
+Place: Pune
+
+                                                                                                  Student Name
+                                                                                                  Seat Number: 4444
+                                                                                                  Department of MCA
+
+                                                                     iv
+                                   Abstract
+
+The AI Recipe Generator is a web-based application designed to help users create
+recipes from available ingredients, dietary preferences, cuisine choices, cooking
+time, and serving requirements. The system reduces the everyday difficulty of deciding
+what to cook by combining a clean user interface with AI-assisted recipe generation.
+The application provides user authentication, profile management, pantry tracking,
+recipe generation, saved recipes, shopping list support, meal planning, and preference
+management. The frontend is developed using React, Vite, Tailwind CSS, React Router,
+Axios, and Lucide icons. The backend uses Node.js, Express.js, JWT authentication,
+bcrypt password hashing, PostgreSQL, Sequelize, and the Google GenAI package for AI
+integration.
+The project focuses on usability, personalization, data security, and practical meal
+planning. It supports a structured database design for users, preferences, pantry
+items, recipes, nutrition, meal plans, and shopping lists.
+Keywords: AI, recipe generation, meal planning, pantry management, React, Express,
+PostgreSQL, JWT.
+
+                                                                      v
+                             Contents
+
+Certificate                                ii
+
+Acknowledgement                            iii
+
+Declaration                                iv
+
+Abstract                                   v
+
+List of Figures                            viii
+
+List of Tables                             ix
+
+List of Abbreviation                       x
+
+1 About Project                            1
+
+2 Introduction                             3
+
+3 Literature Survey                        5
+
+4 Software Requirements Specification      7
+
+5 Project Plan                             10
+
+6 System Design                            12
+
+7 Implementation                           16
+
+8 Software Testing                         18
+
+9 Output Screens                           20
+
+10 Conclusion & Future Work                22
+
+References                                 23
+
+                                       vi
+                             List of Figures
+
+6.1 System Architecture                       1
+
+6.2 Level 0 Data Flow Diagram                 2
+
+6.3 Use Case Diagram                          3
+
+6.4 Entity Relationship Diagram               4
+
+9.1 Login Screen                              5
+
+9.2 Recipe Generator Screen                   6
+
+9.3 Dashboard Screen                          7
+
+                                 viii
+                           List of Tables
+
+3.1 Literature Survey                      1
+
+4.1 Hardware Requirements                  2
+
+4.2 Software Requirements                  3
+
+5.1 Risk Analysis                          4
+
+8.1 Test Cases                             5
+
+                           ix
+Abbreviation  List of Abbreviation
+AI
+API                Full Form
+DBMS               Artificial Intelligence
+DFD                Application Programming Interface
+ERD                Database Management System
+JWT                Data Flow Diagram
+SRS                Entity Relationship Diagram
+UI                 JSON Web Token
+                   Software Requirements Specification
+                   User Interface
+
+              x
+1 About Project
+
+1.1 Title
+
+AI Recipe Generator
+
+1.2 Domain
+
+Artificial Intelligence, Food Technology, Web Application Development, Personal
+Productivity, and Meal Planning.
+
+1.3 Aim
+
+The aim of this project is to develop a web application that generates useful recipes
+from user-provided ingredients and personal food preferences while also helping users
+manage pantry items, saved recipes, meal plans, and shopping lists.
+
+1.4 Objective
+
+  - Provide secure login, signup, and protected user pages.
+  - Allow users to enter ingredients or use pantry items for recipe generation.
+  - Support cuisine type, dietary restriction, serving size, and cooking time
+  preferences.
+  - Display generated recipes with ingredients, instructions, time, difficulty, tags,
+  and nutrition.
+  - Maintain database tables for users, preferences, recipes, pantry, meal plans, and
+  shopping lists.
+
+1.5 Problem Statement
+
+Many users struggle to decide what to cook with ingredients already available at home.
+Existing recipe websites usually require manual searching and do not adapt well to
+pantry stock, dietary restrictions, serving count, and preferred cuisines. This project
+solves the problem by generating personalized recipe suggestions and organizing the
+cooking workflow in a single application.
+
+                                                                      1
+2 Introduction
+
+2.1 Overview
+
+AI Recipe Generator is a full-stack web application. The React frontend provides pages
+for dashboard, pantry, recipe generator, saved recipes, recipe details, meal planner,
+shopping list, login, signup, and settings. The backend is built using Express.js and
+PostgreSQL, with JWT based authentication and user preference APIs.
+
+2.2 Motivation
+
+Food waste and meal decision fatigue are common daily problems. A user may have
+ingredients available but may not know how to combine them into a complete dish. The
+motivation of this project is to make cooking decisions faster, more personal, and more
+organized.
+
+2.3 Project Scope and Limitations
+
+  - Scope includes user account management, recipe generation workflow, pantry
+  tracking, meal planning, and shopping list support.
+  - The current frontend uses dummy recipe data for some screens while the
+  architecture is prepared for API integration.
+  - AI output quality depends on prompt design, available ingredients, and model
+  response quality.
+  - Internet access and API keys are required for production AI generation.
+
+2.4 Methodology of Problem Solving
+
+The project follows an iterative development method. Requirements are identified from
+daily cooking workflows, modules are separated into frontend pages and backend services,
+and data is stored in a relational database. Authentication and protected routes ensure
+that each user sees only personal data.
+
+                                                                      2
+3 Literature Survey
+
+3.1 Similar Work
+
+Recipe websites, meal planner applications, and pantry management tools already exist.
+However, many systems focus on only one part of the process. Some provide static
+recipes, some provide grocery planning, and some provide diet tracking. This project
+combines these ideas with AI assisted recipe creation.
+
+3.2 Tabulated Short Survey
+
+System              Features                         Limitations
+
+Traditional recipe  Search recipes by name,          Less personalized and
+websites            cuisine, ingredients.            mostly manual.
+
+Meal planner apps   Calendar planning and grocery    Recipe creation is
+                    lists.                           limited.
+
+AI chat tools       Can generate recipe text.        No pantry, account, or
+                                                     saved workflow.
+
+Proposed system     AI recipe generation with        Needs complete API
+                    pantry, preferences, recipes,    integration for all
+
+3.3 Advantages and Disadvantages of Previous System
+
+- Advantages: large recipe collections, familiar search interfaces, and ready-made
+cooking content.
+- Disadvantages: less personalization, repeated manual filtering, limited pantry
+awareness, and weak integration with meal planning.
+
+3.4 Outcome of Literature Survey
+
+The survey shows that a useful recipe system should be personalized, searchable, secure,
+and connected to the user's pantry and planning workflow. The proposed project therefore
+emphasizes user preferences, ingredient input, protected accounts, and database-backed
+planning modules.
+
+                                               3
+4 Software Requirements Specification
+
+4.1 Functional Requirements
+
+  - User can register and login using email and password.
+  - User can view and update profile information.
+  - User can update dietary restrictions, allergies, default servings, cuisine
+  preferences, and measurement units.
+  - User can generate recipes using ingredients, pantry option, cuisine, dietary tags,
+  servings, and cooking time.
+  - User can manage pantry items, saved recipes, meal plans, and shopping lists.
+
+4.2 External Interface Requirement
+
+The user interface is browser based and built with React components. The software
+interface uses REST API calls through Axios, JSON request and response bodies, JWT
+bearer tokens, and PostgreSQL database connectivity through Node.js packages.
+
+4.3 Nonfunctional Requirements
+
+  - Performance: pages should load quickly and API responses should be optimized
+  through indexes.
+  - Security: passwords must be hashed and protected routes must verify JWT tokens.
+  - Reliability: database constraints and cascading relations protect user-owned data.
+  - Usability: the interface should be simple enough for repeated daily use.
+  - Maintainability: frontend pages, backend controllers, models, routes, and
+  middleware are separated.
+
+4.4 System Requirement
+
+Type                Requirement
+
+Database            PostgreSQL with UUID extension, relational tables, JSONB
+                    fields, and indexes.
+
+Frontend            React 19, Vite, Tailwind CSS, React Router, Axios,
+                    Lucide React, React Hot Toast.
+
+Backend             Node.js, Express.js, JWT, bcryptjs, dotenv, cors, pg,
+                    Sequelize, Google GenAI.
+
+Hardware            Minimum 4 GB RAM, modern processor, 500 MB free disk
+                    space for development.
+
+4.5 Analysis Model
+
+The system can be analyzed as a user-centered workflow: authentication, preference
+setup, ingredient entry, AI generation, recipe review, save action, meal planning, and
+shopping list preparation.
+
+4.5.1 SDLC Model to be Applied
+
+The iterative SDLC model is suitable because features such as pantry, generator,
+recipes, and meal planner can be designed, implemented, tested, and improved in cycles.
+
+                                 4
+5 Project Plan
+
+5.1 Project Estimate
+
+The project is divided into requirement analysis, UI design, backend setup, database
+design, authentication implementation, recipe generator workflow, testing,
+documentation, and deployment preparation.
+
+5.1.1 Reconciled Estimates
+
+Activity                                                     Estimated Duration
+
+Requirement analysis and study                               1 week
+
+Frontend page development                                    2 weeks
+
+Backend API and database design                              2 weeks
+
+Integration and testing                                      1 week
+
+Documentation and report                                     1 week
+
+5.2 Risk Management              Impact                               Mitigation
+
+ Risk
+
+AI API failure                   Recipe generation may                Show validation, retry, and
+Invalid user input               stop.                                fallback messages.
+Database error                   Poor recipe result.
+Security issue                                                        Validate ingredients and
+                                 User data may not load.              preferences.
+
+                                 Unauthorized access.                 Use constraints, indexes, and
+                                                                      error handling.
+
+                                                                      Use JWT middleware and hashed
+                                                                      passwords.
+
+                                                          5
+6 System Design
+
+6.1 System Architecture
+
+The architecture uses a browser client, React frontend, Express backend, PostgreSQL
+database, and AI service. The browser sends requests to the frontend, the frontend
+communicates with backend REST APIs, the backend validates authentication and manages
+database operations, and the AI service generates recipe content.
+
+User Browser  HTTPS / JSON API        Express API
+              React + Vite UI
+
+                                 SQL                  Prompt / Response
+              PostgreSQL DB           AI Service
+
+6.2 Data Flow Diagrams
+
+Level 0 DFD: User provides ingredients and preferences to the AI Recipe Generator
+System. The system authenticates the user, stores or fetches user data from the
+database, requests recipe generation, and returns recipes, meal plans, and shopping
+lists to the user.
+
+6.3 Database Design
+
+The database includes users, user_preferences, pantry_items, recipes,
+recipe_ingredients, recipe_nutrition, meal_plans, and shopping_lists. UUID primary keys
+are used, and user-owned records reference the users table with cascade behavior.
+
+6.4 UML Diagrams
+
+Main actors are User and System. The User can register, login, update preferences,
+manage pantry, generate recipe, save recipe, create meal plan, and generate shopping
+list. The System validates input, stores data, and communicates with the AI service.
+
+              6
+7 Implementation
+
+7.1 Frontend Implementation
+
+The frontend is implemented in React with Vite. App.jsx defines routes for login,
+signup, dashboard, pantry, recipe generator, recipes, recipe detail, meal plan, shopping
+list, and settings. ProtectedRoute prevents unauthenticated access. AuthContext manages
+user session state.
+
+7.2 Backend Implementation
+
+The backend uses Express.js. authController handles register, login, get profile, update
+profile, update password, and delete account. JWT tokens are generated after successful
+authentication. The auth middleware verifies protected requests.
+
+7.3 Database Implementation
+
+The schema.sql file creates the required PostgreSQL tables, indexes, and update
+timestamp triggers. The database supports JSONB fields for recipe ingredients,
+instructions, meal plan recipes, and shopping list ingredients.
+
+7.4 Module Description
+
+  - Authentication Module: handles user registration, login, token creation, and
+  protected access.
+  - Recipe Generator Module: collects ingredients and preferences and displays
+  generated recipe details.
+  - Pantry Module: stores ingredient stock information with quantity, unit, category,
+  and expiration date.
+  - Meal Planner Module: organizes meals by date and meal type.
+  - Shopping List Module: tracks required ingredients and checked status.
+
+                                                                      7
+8 Software Testing
+
+8.1 Testing Strategy
+
+Testing focuses on validation, authentication, protected navigation, user preference
+updates, recipe generation form behavior, database constraints, and API error handling.
+
+Test Case                            Expected Result
+
+Register with valid data             Account created and token returned.
+
+Login with wrong password            Unauthorized response shown.
+
+Open dashboard without token         Redirect to login page.
+
+Generate recipe without ingredients  Validation message is displayed.
+
+Update preferences                   Preferences are saved for the logged-in
+                                     user.
+
+Delete account                       User and related preferences are
+                                     removed.
+
+8.2 Types of Testing
+
+- Unit Testing for individual controller and helper behavior.
+- Integration Testing for frontend to backend API calls.
+- Functional Testing for user workflows.
+- Security Testing for JWT and password handling.
+- Usability Testing for form clarity and navigation.
+
+                                     8
+9 Output Screens
+
+This section describes the major screens implemented in the project. Actual screenshots
+can be inserted later if required by the college format.
+
+9.1 Login and Signup Screen
+
+The login and signup pages allow users to access the application securely. After login,
+the token is stored and used for authenticated API requests.
+
+9.2 Dashboard Screen
+
+The dashboard provides a cooking overview, including total recipes, pantry item count,
+meals planned for the week, quick action links, recent recipes, and upcoming meals.
+
+9.3 Recipe Generator Screen
+
+The recipe generator screen allows entry of ingredients, pantry usage, cuisine type,
+dietary restrictions, serving count, and cooking time. Generated output includes recipe
+name, description, ingredients, instructions, nutrition, tips, and save action.
+
+9.4 Pantry, Meal Planner, and Shopping List Screens
+
+These screens support the complete cooking workflow by managing ingredients, planning
+meals, and preparing grocery requirements.
+
+                                                                      9
+10 Conclusion and Future Work
+
+10.1 Conclusion
+
+The AI Recipe Generator successfully demonstrates a full-stack approach to personalized
+recipe generation and meal organization. It combines a React based user interface,
+Express backend, JWT authentication, PostgreSQL database design, and AI integration
+capability. The system helps users convert available ingredients and preferences into
+useful recipe ideas while organizing pantry, meals, and shopping needs.
+
+10.2 Future Work
+
+  - Connect all frontend modules to production backend APIs.
+  - Improve AI prompts for nutrition-aware and budget-aware recipes.
+  - Add image generation or image upload for recipes.
+  - Add email reminders for expiring pantry items and planned meals.
+  - Deploy the system with secure environment variables and monitoring.
+
+References
+
+  - React documentation: https://react.dev/
+  - Vite documentation: https://vite.dev/
+  - Express.js documentation: https://expressjs.com/
+  - PostgreSQL documentation: https://www.postgresql.org/docs/
+  - JWT introduction: https://jwt.io/introduction
+  - Google GenAI package documentation.
+
+                                                                     10
+
